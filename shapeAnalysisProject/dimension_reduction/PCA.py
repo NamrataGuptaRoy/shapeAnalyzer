@@ -4,7 +4,7 @@ from sklearn.decomposition import PCA
 import matplotlib.pyplot as plt
 
 def show_plot(similarity, filenames=[], value=True, title=""):
-    print "Executing Phase 4: Applying dimensionality reduciton using PCA"
+    print "Executing Phase 4: Applying dimensionality reduction using PCA"
     small = PCA(n_components=2).fit_transform(similarity)
     print "Executing Phase 5: Plotting similarity in 2-D graph"
     fig, ax = plt.subplots()

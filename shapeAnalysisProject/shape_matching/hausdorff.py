@@ -1,6 +1,6 @@
 from scipy.spatial.distance import directed_hausdorff
 
-def similarity_hausdorff(new_image, images=[], similarity=[]):
+def similarity_Hausdorff(new_image, images=[], similarity=[]):
     print "Executing Phase 3: Calculating similarity of shapes using Hausdorff distance"
     N = len(images)
     for i in xrange(N):
