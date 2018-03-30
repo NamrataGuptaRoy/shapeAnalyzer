@@ -2,7 +2,7 @@
 
 import cv2
 
-def similarity_Hu(new_image, images=[], similarity=[]):
+def similarity(new_image, images=[], similarity=[]):
     print "Executing Phase 3: Calculating similarity of shapes using Hu-moments"
     N = len(images)
     for i in xrange(N):

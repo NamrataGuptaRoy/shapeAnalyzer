@@ -2,8 +2,8 @@
 
 from shapeAnalysisProject.input.x_ray import read_image
 from shapeAnalysisProject.image_filtering.x_ray.Sobel import filter_image
-from shapeAnalysisProject.shape_matching.Hu_moments import similarity_Hu
-from shapeAnalysisProject.shape_matching.hausdorff import similarity_Hausdorff
+from shapeAnalysisProject.shape_matching.Hu_moments import similarity as similarity_Hu
+from shapeAnalysisProject.shape_matching.hausdorff import similarity as similarity_Hausdorff
 from shapeAnalysisProject.dimension_reduction.PCA import show_plot
 import glob
 import sys
