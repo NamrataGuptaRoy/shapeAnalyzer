@@ -3,8 +3,8 @@
 from sklearn.decomposition import PCA
 import matplotlib.pyplot as plt
 
-def show_plot(similarity, filenames=[]):
-    print "Executing Phase 4: Applying dimensionality reduciton using PCA"
+def show_plot(similarity, filenames=[], value=True, title=""):
+    print "Executing Phase 4: Applying dimensionality reduction using PCA"
     small = PCA(n_components=2).fit_transform(similarity)
     print "Executing Phase 5: Plotting similarity in 2-D graph"
     fig, ax = plt.subplots()
@@ -13,4 +13,5 @@ def show_plot(similarity, filenames=[]):
         N = len(filenames)
         for i in xrange(N):
             ax.annotate(filenames[i].split('/')[1], (small[i][0], small[i][1]))
-    plt.show()
+    plt.title(title)
+    plt.show(block=value)
