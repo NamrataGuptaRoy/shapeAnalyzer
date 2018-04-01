@@ -4,6 +4,7 @@ Canny's Edge Detection Algorithm
 '''
 
 from astropy.io import fits
+import numpy as np
 
 def read_image(filename):
     print "Executing Phase 1: reading data from FITS file"
@@ -16,7 +17,7 @@ def read_image(filename):
         return []
     try:
         hdulist = fits.getdata(filename)
-        return hdulist
+        return np.array(hdulist)
     except:
         print "No data found in file: ", filename
         return []
