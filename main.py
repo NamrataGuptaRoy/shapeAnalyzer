@@ -46,5 +46,5 @@ for t in xrange(2):
         plt.show()
 show_plot_PCA(sim[0], filenames, False, "Hu_moments and PCA")
 show_plot_TSNE(sim[0], filenames, False, "Hu_moments and TSNE")
-show_plot_PCA(sim[0], filenames, False, "Hausdorff Distance and PCA")
+show_plot_PCA(sim[1], filenames, False, "Hausdorff Distance and PCA")
 show_plot_TSNE(sim[1], filenames, True, "Hausdorff Distance and TSNE")
