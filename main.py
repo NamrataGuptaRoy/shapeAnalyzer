@@ -4,8 +4,9 @@ from shapeAnalysisProject.input.x_ray import read_image
 from shapeAnalysisProject.image_filtering.x_ray.Sobel import filter_image
 from shapeAnalysisProject.shape_matching.Hu_moments import similarity as similarity_Hu
 from shapeAnalysisProject.shape_matching.hausdorff import similarity as similarity_Hausdorff
-from shapeAnalysisProject.dimension_reduction.PCA import show_plot
-from shapeAnalysisProject.statistics.statistics import variance, show_images
+from shapeAnalysisProject.dimension_reduction.PCA import show_plot as show_plot_PCA
+from shapeAnalysisProject.dimension_reduction.TSNE import show_plot as show_plot_TSNE
+from shapeAnalysisProject.statistics.statistics import variance
 import glob
 import sys
 import numpy as np
@@ -43,5 +44,7 @@ for t in xrange(2):
         else:
             plt.title("Using Haussdorff distance:\n Top "+str(i+1)+" image: "+var[i][1].split('/')[1])
         plt.show()
-show_plot(sim[0], filenames, False, "Hu_moments")
-show_plot(sim[1], filenames, True, "Hausdorff Distance")
+show_plot_PCA(sim[0], filenames, False, "Hu_moments and PCA")
+show_plot_TSNE(sim[0], filenames, False, "Hu_moments and TSNE")
+show_plot_PCA(sim[0], filenames, False, "Hausdorff Distance and PCA")
+show_plot_TSNE(sim[1], filenames, True, "Hausdorff Distance and TSNE")
